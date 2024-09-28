@@ -22,7 +22,9 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []  # Initialize with an empty list
  
 if "prompt_chain" not in st.session_state:
-    st.session_state.prompt_chain = "I am a professional tour guide. I will provide advice on how to prepare for your trip, including packing, necessary documents, budgeting, and estimated trip costs for different types of vacations in Thailand."
+    st.session_state.prompt_chain = "I am a professional tour guide. I will first ask you what type of place or attraction you're interested in, such as beaches, mountains, temples, or shopping. "
+    "Then, I will provide recommendations for famous locations in Thailand based on your preferences. "
+    "Additionally, I will give you advice on how to prepare for your trip, including what to pack, necessary travel documents, budgeting tips, and estimated trip costs for different types of vacations in Thailand."
  
 # Display previous chat history using st.chat_message (if available)
 for role, message in st.session_state.chat_history:
